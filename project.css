@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Navigation/Menu */
+nav {
+    background-color: #1E201E;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+nav .project-menu {
+    position: relative; /* Menetapkan posisi relatif untuk elemen menu */
+    padding-left: 10px; /* Padding untuk memberi jarak dari tepi kiri */
+}
+
+
+.project-menu {
+    flex: 1; /* Membiarkan project-menu mengambil ruang yang tersedia */
+    padding-left: 10px; /* Jarak dari tepi kiri */
+}
+
+.project-menu h4 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: "Kanit", sans-serif;
+    text-align: left;
+}
+
+
+.hamburger-menu {
+    display: none; /* Default hidden on larger screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburger-menu .icon-bars,
+.hamburger-menu .icon-close {
+    font-size: 2rem;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.hamburger-menu .icon-close {
+    display: none; /* Hide close icon by default */
+}
+
+.project-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-list li {
+    margin-left: 20px;
+}
+
+.project-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Show the hamburger menu and hide the project list on small screens */
+@media (max-width: 1530px) {
+    .project-list {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #1E201E;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+        z-index: 101; /* Make sure menu is above other content */
+    }
+
+    .project-list.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu on small screens */
+    }
+
+    .hamburger-menu.active .icon-bars {
+        display: none; /* Hide bars icon when menu is open */
+    }
+
+    .hamburger-menu.active .icon-close {
+        display: block; /* Show close icon when menu is open */
+    }
+}
+
+
+
+/* Project List */
+.project-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-list li {
+    margin-left: 20px;
+}
+
+.project-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* Project Section */
+
+section {
+    background-color: #1E201E;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+#p1 > .wrapper > .foto > div > a {
+    font-size: 1rem;
+    color: #000;
+    font-weight: normal;
+}
+#p1 {
+    background-color: #1E201E;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#p1 .wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+#p1 > .wrapper > .foto > a > i {
+    color: #000;
+}
+#p2 > .wrapper > .foto > div > a {
+    font-size: 1rem;
+    color: #000;
+    font-weight: normal;
+}
+#p2 {
+    background-color: #1E201E;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#p2 .wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+
+#p2 > .wrapper > .foto > a > i {
+    color: #000;
+}
+#p3 > .wrapper > .foto > div > a {
+    font-size: 1rem;
+    color: #000;
+    font-weight: normal;
+}
+#p3 {
+    background-color: #1E201E;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#p3 .wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+#p3 > .wrapper > .foto > a > i {
+    color: #000;
+}
+
+#p4 > .wrapper > .foto > div > a {
+    font-size: 1rem;
+    color: #000;
+    font-weight: normal;
+}
+#p4 {
+    background-color: #1E201E;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#p4 .wrapper {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+
+#p4 > .wrapper > .foto > a > i {
+    color: #000;
+}
+
+
+
+
+.foto {
+    width: 180px; /* Lebar kontainer foto */
+    height: 300px; /* Tinggi kontainer foto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px; /* Jarak antara foto dan konten */
+    position: relative;
+}
+
+.foto img {
+    width: 100%; /* Membuat gambar mengikuti ukuran kontainer */
+    height: 100%; /* Membuat gambar mengikuti ukuran kontainer */
+    object-fit: cover; /* Menjaga rasio gambar dengan pemotongan yang tepat */
+    border-radius: 8px; /* Sudut membulat pada gambar */
+}
+
+.content {
+    flex: 1; /* Konten mengambil sisa ruang yang ada */
+}
+
+.content h4 {
+    font-size: 2.5rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Kanit", sans-serif;
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+
+/*
+* button
+*/
+
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: #FFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Position the button absolutely within the .foto container */
+    bottom: 10px; /* Distance from the bottom edge of the .foto container */
+    right: 8px; /* Distance from the right edge of the .foto container */
+}
+
+.button:hover {
+    background-color: #333; /* Warna latar belakang saat hover */
+}
+
+.button i {
+    margin-left: 8px; /* Jarak antara ikon dan teks */
+}

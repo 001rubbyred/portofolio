@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100..900&display=swap');
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Kanit", sans-serif;
+}
+
+nav {
+    background-color: #1E201E; /* Warna latar belakang gelap */
+    color: #fff /* Warna teks terang */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav > .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* Pastikan selector cukup spesifik */
+section > #p4 > .content > h4 {
+    font-size: 4rem;
+}
+
+.wrapper { 
+    display: flex;
+    align-items: flex-start;/* Atur lebar sesuai kebutuhan */
+    margin: 0 auto; /* Centang konten secara horizontal */
+    padding: 20px 50px 20px 50px; /* Atur padding atas dan bawah */
+}
+
+.wrapper > .p4 > h4 {
+    align-items: left;
+    font-family: "Kanit", sans-serif;
+    margin: 0;
+    padding: 20;
+    font-size: 1.7rem;
+    color: #fff;
+    background-color: #1E201E; /* Warna teks */
+}
+
+.foto {
+    width: 45px; /* Lebar kontainer foto */
+    height: 45px; /* Tinggi kontainer foto */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-right: 10px; /* Jarak antara foto dan konten */
+    position: relative;
+}
+
+.foto img {
+    width: 100%; /* Membuat gambar mengikuti ukuran kontainer */
+    height: 100%; /* Membuat gambar mengikuti ukuran kontainer */
+    object-fit: cover; /* Menjaga rasio gambar dengan pemotongan yang tepat */
+    border-radius: 8px; /* Sudut membulat pada gambar */
+}.container {
+    display: grid;
+    place-items: center; /* Menyusun item secara vertikal dan horizontal di tengah */
+    height: 100vh; /* Menyusun item secara vertikal di tengah */
+}
+
+.wrapper > .item { /* Pastikan nama kelas konsisten */
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    flex-direction: column; /* Mengatur tata letak elemen anak secara vertikal */
+    align-items: center; /* Menyusun gambar dan teks di tengah secara horizontal */
+    justify-content: center; /* Menyusun gambar dan teks di tengah secara vertikal */
+}
+
+img {
+    padding: 0;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    display: block; /* Menghindari ruang kosong di bawah gambar */
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+    .wrapper > .item > img {
+        width: 80%; /* Mengatur lebar gambar menjadi 80% dari kontainer untuk layar kecil */
+    }
+}
+
+/* Media query untuk layar besar */
+@media (min-width: 1024px) {
+    .wrapper > .item > img {
+        width: 60%; /* Mengatur lebar gambar menjadi 60% dari kontainer untuk layar besar */
+    }
+}
+
+.wrapper > .item > h3 {
+    font-size: 16px;
+    color: #1E201E;
+    font-family: "Kanit", sans-serif;
+}
+
+.button > a > i class="fa-solid fa-arrow-left" {
+    padding: 0;
+    margin: 0 auto;
+    width: 35%;
+    height: auto;
+    display: block;
+}
+.button {
+    display: inline-flex; /* Menjadikan tombol fleksibel jika diperlukan */
+    align-items: center; /* Menyusun item secara vertikal di tengah tombol */
+    justify-content: center; /* Menyusun item secara horizontal di tengah tombol */
+    padding: 5px;
+    color: #1E201E;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Memastikan tombol diposisikan relatif terhadap .foto */
+    bottom: 10px; /* Jarak dari tepi bawah .foto */
+    right: 8px; /* Jarak dari tepi kanan .foto */
+}
